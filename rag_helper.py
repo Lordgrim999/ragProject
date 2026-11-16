@@ -65,7 +65,7 @@ class RAGBase:
             {"role": "system", "content": self.instructions},
             {"role": "user", "content": prompt}
         ]
-
+        print("Input messages:", input_messages)  # Debugging line
         response = self.llm_client.responses.create(
             model=self.model,
             input=input_messages
